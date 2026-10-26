@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' data: blob:; connect-src 'self' data: blob:; worker-src 'self' blob:; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Email Signature — Free Email Signature Generator for Gmail &amp; Outlook | S3eidat Tools</title>
+<meta name="description" content="Make a professional HTML email signature in a minute. Four templates, your colour, social links, logo. Copy straight into Gmail, Outlook, Apple Mail or Thunderbird. Free and private.">
+<meta property="og:title" content="Email Signature — free, private signature generator">
+<meta property="og:description" content="Professional email signatures for Gmail, Outlook and Apple Mail. Runs 100% in your browser.">
+<link rel="icon" href="kit/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="kit/kit.css">
+<link rel="stylesheet" href="app.css">
+<script src="kit/kit.js"></script>
+<!--s3:seo-->
+<link rel="canonical" href="https://s3eidat.github.io/email-signature/">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S3eidat Tools">
+<meta property="og:url" content="https://s3eidat.github.io/email-signature/">
+<meta property="og:image" content="https://s3eidat.github.io/email-signature/screenshot.png">
+<meta property="og:image:width" content="1280"><meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Email Signature — Professional email signatures in a minute">
+<meta name="twitter:description" content="Professional email signatures in a minute. Free, private and runs 100% in your browser: no sign-up, no uploads.">
+<meta name="twitter:image" content="https://s3eidat.github.io/email-signature/screenshot.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Email Signature", "url": "https://s3eidat.github.io/email-signature/", "description": "Professional email signatures in a minute. Free, private and runs 100% in your browser: no sign-up, no uploads.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://s3eidat.github.io/email-signature/screenshot.png", "author": {"@type": "Person", "name": "s3eidat", "url": "https://github.com/s3eidat"}}</script>
+<!--/s3:seo-->
+</head>
+<body data-tool="email-signature">
+<main class="s3-main">
+  <section class="s3-hero">
+    <h1>Email Signature</h1>
+    <p>Fill in your details, pick a template and a colour, then copy the signature straight into Gmail, Outlook, Apple Mail or Thunderbird. Nothing you type leaves this page.</p>
+  </section>
+
+  <div class="es-grid">
+    <section class="card stack" id="form">
+      <div class="row between">
+        <h2>Your details</h2>
+        <div class="row">
+          <button class="btn ghost small" type="button" id="sample">Sample</button>
+          <button class="btn ghost small" type="button" id="clear"><svg class="i"><use href="#i-trash"/></svg>Clear</button>
+        </div>
+      </div>
+      <div class="grid-2">
+        <label class="field">Full name<input class="input" id="name" dir="auto" autocomplete="off" placeholder="Layla Haddad"></label>
+        <label class="field">Job title<input class="input" id="title" dir="auto" autocomplete="off" placeholder="Product Designer"></label>
+        <label class="field">Company<input class="input" id="company" dir="auto" autocomplete="off" placeholder="Northwind Studio"></label>
+        <label class="field">Phone<input class="input" id="phone" type="tel" autocomplete="off" placeholder="+962 7 9000 0000"></label>
+        <label class="field">Email<input class="input" id="email" type="email" autocomplete="off" placeholder="layla@northwind.example"></label>
+        <label class="field">Website<input class="input" id="website" autocomplete="off" spellcheck="false" placeholder="northwind.example"></label>
+      </div>
+      <label class="field"><span>Address <span class="faint">(optional)</span></span><input class="input" id="address" dir="auto" autocomplete="off" placeholder="12 Rainbow St, Amman, Jordan"></label>
+      <label class="field"><span>Tagline or note <span class="faint">(optional)</span></span><input class="input" id="note" dir="auto" autocomplete="off" placeholder="Book a call: northwind.example/meet"></label>
+
+      <details class="es-more" open>
+        <summary>Social links</summary>
+        <div class="grid-2 mt">
+          <label class="field">LinkedIn<input class="input" id="linkedin" autocomplete="off" spellcheck="false" placeholder="linkedin.com/in/you"></label>
+          <label class="field">X (Twitter)<input class="input" id="x" autocomplete="off" spellcheck="false" placeholder="x.com/you"></label>
+          <label class="field">Instagram<input class="input" id="instagram" autocomplete="off" spellcheck="false" placeholder="instagram.com/you"></label>
+          <label class="field">Facebook<input class="input" id="facebook" autocomplete="off" spellcheck="false" placeholder="facebook.com/you"></label>
+          <label class="field">GitHub<input class="input" id="github" autocomplete="off" spellcheck="false" placeholder="github.com/you"></label>
+          <label class="field">YouTube<input class="input" id="youtube" autocomplete="off" spellcheck="false" placeholder="youtube.com/@you"></label>
+        </div>
+      </details>
+
+      <details class="es-more">
+        <summary>Logo</summary>
+        <div class="stack mt">
+          <label class="field"><span>Hosted logo URL <span class="faint">(used only in the copied signature)</span></span>
+            <input class="input" id="logoUrl" autocomplete="off" spellcheck="false" placeholder="yourdomain.example/logo.png">
+          </label>
+          <p class="faint es-p">Email apps load the logo from a web address, so host it on your site first. This page never loads that address; the preview uses the file you pick below instead.</p>
+          <div class="row">
+            <label class="btn small" id="pickLogo"><svg class="i"><use href="#i-image"/></svg>Pick logo for preview<input type="file" accept="image/*" hidden></label>
+            <button class="btn ghost small" type="button" id="dropLogo" hidden>Remove</button>
+          </div>
+          <label class="field"><span>Logo width <span class="faint" id="logoWv">80 px</span></span>
+            <input type="range" id="logoW" min="40" max="200" step="4" value="80">
+          </label>
+        </div>
+      </details>
+    </section>
+
+    <div class="stack es-side">
+      <section class="card stack">
+        <div class="row between">
+          <div class="seg" id="tpl" role="group" aria-label="Template">
+            <button type="button" data-v="classic" aria-pressed="true">Classic</button>
+            <button type="button" data-v="modern" aria-pressed="false">Modern</button>
+            <button type="button" data-v="compact" aria-pressed="false">Compact</button>
+            <button type="button" data-v="banner" aria-pressed="false">Banner</button>
+          </div>
+        </div>
+        <div class="row">
+          <label class="field es-inline">Accent<input type="color" id="accent" value="#0e9f9a"></label>
+          <label class="field es-inline">Font
+            <select class="select" id="font">
+              <option value="Arial, Helvetica, sans-serif">Arial</option>
+              <option value="Verdana, Geneva, sans-serif">Verdana</option>
+              <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+              <option value="Georgia, 'Times New Roman', serif">Georgia</option>
+              <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet</option>
+            </select>
+          </label>
+        </div>
+        <div class="es-mail">
+          <div class="es-mail-head"><span></span><span></span><span></span><b>New message</b></div>
+          <div class="es-mail-body">
+            <p class="es-fake">Best regards,</p>
+            <div id="preview" class="es-preview"></div>
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn primary" type="button" id="copyRich"><svg class="i"><use href="#i-copy"/></svg>Copy signature</button>
+          <button class="btn" type="button" id="copyHtml">Copy HTML</button>
+          <button class="btn ghost" type="button" id="saveHtml"><svg class="i"><use href="#i-download"/></svg>.html</button>
+        </div>
+        <p class="faint es-p" id="logoNote" hidden></p>
+      </section>
+
+      <section class="card stack">
+        <div class="row between">
+          <h2>Add it to your email app</h2>
+        </div>
+        <div class="seg" id="app" role="group" aria-label="Email app">
+          <button type="button" data-v="gmail" aria-pressed="true">Gmail</button>
+          <button type="button" data-v="outlook" aria-pressed="false">Outlook</button>
+          <button type="button" data-v="apple" aria-pressed="false">Apple Mail</button>
+          <button type="button" data-v="thunderbird" aria-pressed="false">Thunderbird</button>
+        </div>
+        <ol class="es-steps" id="steps"></ol>
+      </section>
+    </div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

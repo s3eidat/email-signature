@@ -1,0 +1,27 @@
+.es-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 14px; align-items: start; }
+@media (max-width: 900px) { .es-grid { grid-template-columns: minmax(0, 1fr); } }
+.es-side { position: sticky; top: 74px; }
+@media (max-width: 900px) { .es-side { position: static; } }
+
+.es-more { border-top: 1px solid var(--line); padding-top: 12px; }
+.es-more summary { cursor: pointer; font-weight: 650; font-size: 14px; list-style: none; display: flex; align-items: center; gap: 8px; }
+.es-more summary::-webkit-details-marker { display: none; }
+.es-more summary::before { content: "▸"; color: var(--text-3); transition: transform var(--dur); }
+.es-more[open] summary::before { transform: rotate(90deg); }
+.es-p { margin: 0; }
+.es-inline { grid-auto-flow: column; align-items: center; gap: 8px; }
+.es-inline .select { min-width: 140px; }
+
+/* A white "email" so the preview looks like it will in the inbox. */
+.es-mail { border-radius: 14px; overflow: hidden; border: 1px solid var(--line-strong); background: #ffffff; color: #333333; }
+.es-mail-head { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #f1f3f5; border-bottom: 1px solid #e3e6ea; font-size: 12px; color: #5f6670; }
+.es-mail-head span { width: 10px; height: 10px; border-radius: 50%; background: #d5d9de; }
+.es-mail-head b { margin-left: 8px; font-weight: 600; }
+.es-mail-body { padding: 18px 20px 22px; overflow-x: auto; }
+.es-fake { margin: 0 0 12px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #333333; }
+.es-preview { min-height: 90px; }
+.es-preview a { cursor: default; }
+.es-empty { color: #8a9099; font-family: var(--font); font-size: 13.5px; padding: 24px 0; }
+
+.es-steps { margin: 0; padding-left: 20px; display: grid; gap: 8px; color: var(--text-2); }
+.es-steps b { color: var(--text); font-weight: 600; }
